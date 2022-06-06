@@ -1,0 +1,3 @@
+mysql -uroot -p
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'dbuser'@'%' WITH GRANT OPTION;
+mysql> SET PASSWORD FOR 'dbuser'@'%' = PASSWORD('IForgot');

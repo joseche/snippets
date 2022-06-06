@@ -1,0 +1,16 @@
+all: main
+ 
+main: main.o library1.o library2.o
+	g++ main.o library1.o library2.o -o main
+ 
+main.o: main.cpp
+	g++ -c main.cpp
+ 
+library1.o: library1.cpp
+	g++ -c library1.cpp
+ 
+library2.o: library2.cpp
+	g++ -c library2.cpp
+ 
+clean:
+	rm -rf *.o main

@@ -1,11 +1,11 @@
 
-<h2>Yum Repo</h2>
+# Yum Repo
 
-<pre>
+```
 /etc/yum.repos.d/elasticsearch.repo
-</pre>
+```
 
-<pre>
+```
 [elasticsearch]
 name=Elasticsearch repository for 8.x packages
 baseurl=https://artifacts.elastic.co/packages/8.x/yum
@@ -14,19 +14,16 @@ gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
 enabled=0
 autorefresh=1
 type=rpm-md
-</pre>
+```
 
-<h2>Package installation</h2>
-<pre>
-sudo dnf install --enablerepo=elasticsearch elasticsearch
-sudo yum install --enablerepo=elasticsearch elasticsearch
-</pre>
+# Package installation
+```sh
+dnf install --enablerepo=elasticsearch elasticsearch
+yum install --enablerepo=elasticsearch elasticsearch
+```
 
-<h2>Configuration</h2>
-
-elasticsearch.conf
-
-<pre>
+# Configuration
+```conf
 cluster.name: "somename"
 node.name: "thishost"
 node.master: true
@@ -51,10 +48,10 @@ discovery.zen.minimum_master_nodes: 3
 # discovery.zen.ping.timeout: 5s
 # discovery.zen.ping.multicast.enabled: true
 discovery.zen.ping.unicast.hosts: [10.0.10.5, 10.0.10.6, 10.0.10.7]
-</pre>
+```
 
-<h2>Service</h2>
-<pre>
+# Service
+```
 /bin/systemctl daemon-reload
 /bin/systemctl enable elasticsearch.service
-</pre>
+```
