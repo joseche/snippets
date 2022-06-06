@@ -1,2 +1,2 @@
 # snippets
-Misc snippets
+Use at your own risk
